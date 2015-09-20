@@ -1,0 +1,11 @@
+--- a/forth_runtime.h	1970-01-01 00:00:00.000000000 +0000
++++ b/forth_runtime.h	1970-01-01 00:00:00.000000000 +0000
+@@ -4,7 +4,7 @@
+ #define PUSH(item) (--s, *s = (item))
+ #define OP2(op) (s[1] = s[1] op s[0], ++s)
+ #define PRINT() (printf("%ld ", s[0]), ++s)
+-#define cr(s) (printf("n"), s)
++#define cr(s) (printf("\n"), s)
+ #define drop(s) (s+1)
+ #define dup(s) (--s, s[0]=s[1], s)
+ #define tuck(s) (--s, s[0]=s[1], s[1]=s[2], s[2]=s[0], s)

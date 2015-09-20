@@ -1,0 +1,11 @@
+--- a/forth2c.py	1970-01-01 00:00:00.000000000 +0000
++++ b/forth2c.py	1970-01-01 00:00:00.000000000 +0000
+@@ -20,7 +20,7 @@
+     n += 1
+     # emit line info for C tools (debuggers, etc.)
+     # - a nice option C gives us
+-    print >> out,'n#line',n,'"%s"'%infile
++    print >> out,'\n#line',n,'"%s"'%infile
+     for token in line.lower().strip().split():
+       if token in special:
+         print >> out,special[token],
